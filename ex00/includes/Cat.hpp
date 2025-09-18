@@ -6,7 +6,7 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 02:33:31 by mpapin            #+#    #+#             */
-/*   Updated: 2025/09/17 02:41:38 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/09/18 03:10:31 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,15 @@
 #include "Animal.hpp"
 
 class Cat : public Animal {
-public:
-    Cat();
-    virtual ~Cat();
+    public:
+        Cat();
+        Cat(const Cat& other);
+        Cat& operator=(const Cat& other);
+        virtual ~Cat();
 
-    void makeSound() const;
+        void makeSound() const;
 };
 
 #endif
+
+

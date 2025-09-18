@@ -6,7 +6,7 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 02:32:24 by mpapin            #+#    #+#             */
-/*   Updated: 2025/09/17 05:10:57 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/09/18 03:15:00 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ int main() {
         delete animals[i];
 
     Dog original;
-    Dog copy(original);  // constructeur de copie
+    Dog copy(original);
     Dog assigned;
-    assigned = original; // opérateur d'affectation
+    assigned = original;
 
     Cat kitty;
     Cat kittyCopy(kitty);

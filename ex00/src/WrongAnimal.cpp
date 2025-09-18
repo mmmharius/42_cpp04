@@ -6,14 +6,26 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 02:41:02 by mpapin            #+#    #+#             */
-/*   Updated: 2025/09/17 02:41:03 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/09/18 03:05:03 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal() : type("WrongAnimal") {
-    std::cout << "WrongAnimal constructor called" << std::endl;
+    std::cout << "WrongAnimal called" << std::endl;
+}
+
+WrongAnimal::WrongAnimal(const WrongAnimal& other) : type(other.type) {
+    std::cout << "WrongAnimal copy called" << std::endl;
+}
+
+WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other) {
+    std::cout << "WrongAnimal operator called" << std::endl;
+    if (this != &other) {
+        this->type = other.type;
+    }
+    return *this;
 }
 
 WrongAnimal::~WrongAnimal() {
@@ -25,5 +37,6 @@ std::string WrongAnimal::getType() const {
 }
 
 void WrongAnimal::makeSound() const {
-    std::cout << "* WrongAnimal generic sound *" << std::endl;
+    std::cout << "WrongAnimal sound" << std::endl;
 }
+

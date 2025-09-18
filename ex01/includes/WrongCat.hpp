@@ -6,7 +6,7 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 02:41:25 by mpapin            #+#    #+#             */
-/*   Updated: 2025/09/17 02:41:32 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/09/18 03:17:38 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,12 @@
 class WrongCat : public WrongAnimal {
 public:
     WrongCat();
+    WrongCat(const WrongCat& other);             // ✅ constructeur de copie
+    WrongCat& operator=(const WrongCat& other);  // ✅ opérateur d’affectation
     ~WrongCat();
 
     void makeSound() const;
 };
 
 #endif
+

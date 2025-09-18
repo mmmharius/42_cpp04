@@ -6,7 +6,7 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 04:04:17 by mpapin            #+#    #+#             */
-/*   Updated: 2025/09/17 05:07:24 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/09/18 03:12:38 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ Brain::Brain() {
 }
 
 Brain::Brain(const Brain& other) {
-    *this = other;
     std::cout << "Brain copy constructor called" << std::endl;
+    *this = other;
 }
 
 Brain& Brain::operator=(const Brain& other) {

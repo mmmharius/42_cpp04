@@ -6,7 +6,7 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 04:03:59 by mpapin            #+#    #+#             */
-/*   Updated: 2025/09/17 05:07:17 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/09/18 03:10:50 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #define BRAIN_HPP
 
 #include <iostream>
-#include <string>
 
 class Brain {
     private:
         std::string ideas[100];
+
     public:
         Brain();
         Brain(const Brain& other);
@@ -27,4 +27,5 @@ class Brain {
 };
 
 #endif
+
 
