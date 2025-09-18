@@ -5,39 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/17 02:32:24 by mpapin            #+#    #+#             */
-/*   Updated: 2025/09/18 03:25:59 by mpapin           ###   ########.fr       */
+/*   Created: 2025/09/18 03:30:54 by mpapin            #+#    #+#             */
+/*   Updated: 2025/09/18 03:33:23 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "MateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
+#include "Character.hpp"
 
 int main() {
-    const int size = 4;
-    Animal* animals[size];
+    IMateriaSource* src = new MateriaSource();
+    src->learnMateria(new Ice());
+    src->learnMateria(new Cure());
 
-    for (int i = 0; i < size / 2; i++)
-        animals[i] = new Dog();
-    for (int i = size / 2; i < size; i++)
-        animals[i] = new Cat();
+    ICharacter* me = new Character("me");
 
-    for (int i = 0; i < size; i++)
-        animals[i]->makeSound();
+    AMateria* tmp;
+    tmp = src->createMateria("ice");
+    me->equip(tmp);
+    tmp = src->createMateria("cure");
+    me->equip(tmp);
 
-    for (int i = 0; i < size; i++)
-        delete animals[i];
+    ICharacter* bob = new Character("bob");
 
-    Dog original;
-    Dog copy(original);
-    Dog assigned;
-    assigned = original;
+    me->use(0, *bob);
+    me->use(1, *bob);
 
-    Cat kitty;
-    Cat kittyCopy(kitty);
+    delete bob;
+    delete me;
+    delete src;
 
     return 0;
 }
+
