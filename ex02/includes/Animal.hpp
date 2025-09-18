@@ -6,7 +6,7 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 02:35:33 by mpapin            #+#    #+#             */
-/*   Updated: 2025/09/17 05:06:46 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/09/18 03:21:52 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
     Animal& operator=(const Animal& other);
     virtual ~Animal();
 
-    virtual void makeSound() const;
+    virtual void makeSound() const = 0;
     std::string getType() const;
 };
 

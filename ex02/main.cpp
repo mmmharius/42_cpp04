@@ -6,7 +6,7 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 02:32:24 by mpapin            #+#    #+#             */
-/*   Updated: 2025/09/18 03:15:00 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/09/18 03:23:10 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
-
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
 
 int main() {
     const int size = 4;
