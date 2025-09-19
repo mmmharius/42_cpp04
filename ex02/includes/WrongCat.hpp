@@ -6,7 +6,7 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 02:41:25 by mpapin            #+#    #+#             */
-/*   Updated: 2025/09/18 03:17:38 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/09/19 05:18:17 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 #include "WrongAnimal.hpp"
 
 class WrongCat : public WrongAnimal {
-public:
-    WrongCat();
-    WrongCat(const WrongCat& other);             // ✅ constructeur de copie
-    WrongCat& operator=(const WrongCat& other);  // ✅ opérateur d’affectation
-    ~WrongCat();
+    public:
+        WrongCat();
+        WrongCat(const WrongCat& other);
+        WrongCat& operator=(const WrongCat& other);
+        ~WrongCat();
 
-    void makeSound() const;
+        void makeSound() const;
 };
 
 #endif

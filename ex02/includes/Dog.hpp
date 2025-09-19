@@ -6,7 +6,7 @@
 /*   By: mpapin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/17 02:33:35 by mpapin            #+#    #+#             */
-/*   Updated: 2025/09/17 05:07:30 by mpapin           ###   ########.fr       */
+/*   Updated: 2025/09/19 05:18:19 by mpapin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@
 #include "Brain.hpp"
 
 class Dog : public Animal {
-private:
-    Brain* brain;
-public:
-    Dog();
-    Dog(const Dog& other);
-    Dog& operator=(const Dog& other);
-    ~Dog();
+    private:
+        Brain* brain;
+    public:
+        Dog();
+        Dog(const Dog& other);
+        Dog& operator=(const Dog& other);
+        ~Dog();
 
-    void makeSound() const;
+        void makeSound() const;
 };
 
 #endif
